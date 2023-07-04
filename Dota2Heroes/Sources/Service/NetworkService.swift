@@ -23,8 +23,11 @@ class NetworkService: Service {
     }
     
     private func createTask(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTask {
+        
         return URLSession.shared.dataTask(with: url) { data, response, error in
-            DispatchQueue.main.async { completion(data, response, error) }
+            DispatchQueue.main.async {
+                completion(data, response, error)
+            }
         }
     }
 }

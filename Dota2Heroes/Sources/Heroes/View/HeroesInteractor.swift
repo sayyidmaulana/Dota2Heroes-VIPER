@@ -55,6 +55,6 @@ class HeroesInteractor: HeroesInteractorProtocol {
 
 extension HeroesInteractor {
     private func heroesViewModel(from heroItem: DotaHeroStat) -> HeroesViewModel.Cell {
-        return HeroesViewModel.Cell(image: "https://api.opendota.com\(heroItem.img ?? "")", title: heroItem.name ?? "")
+        return HeroesViewModel.Cell(image: "https://api.opendota.com\(heroItem.img ?? "")", title: heroItem.localizedName ?? "")
     }
 }

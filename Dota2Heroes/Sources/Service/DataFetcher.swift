@@ -36,25 +36,12 @@ class NetworkDataFetcher: DataFetcher {
                 completion(.failure(.invalidResponse))
                 return
             }
-            
-            if let decode = self.decode(jsonData: [DotaHeroStat].self, from: data) {
-                completion(.success(decode))
+            if let data{
+                let decodable = try? JSONDecoder().decode(DotaHeroStats.self, from: data)
+                completion(.success(decodable ?? DotaHeroStats()))
             }
         }
     }
     
-    private func decode<T: Decodable>(jsonData type: T.Type, from data: Data?) -> T? {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        guard let data = data else { return nil }
-        
-        do {
-            let response = try decoder.decode(type, from: data)
-            return response
-        } catch {
-            print(error)
-            return nil
-        }
-    }
 }
+
