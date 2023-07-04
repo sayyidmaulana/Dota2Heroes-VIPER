@@ -36,10 +36,13 @@ class NetworkDataFetcher: DataFetcher {
                 completion(.failure(.invalidResponse))
                 return
             }
-            if let data{
+            
+            if let data {
                 let decodable = try? JSONDecoder().decode(DotaHeroStats.self, from: data)
                 completion(.success(decodable ?? DotaHeroStats()))
+                return
             }
+            
         }
     }
     
