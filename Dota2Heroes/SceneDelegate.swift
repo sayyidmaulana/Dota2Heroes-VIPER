@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: HeroesBuilder.build())
+        window?.rootViewController = UINavigationController(rootViewController: HeroesRouter.route())
         window?.makeKeyAndVisible()
     }
 
