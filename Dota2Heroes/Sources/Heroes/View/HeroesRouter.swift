@@ -6,3 +6,27 @@
 //
 
 import Foundation
+import UIKit
+
+protocol RouteModuleProtocol {
+    static func route() -> UIViewController
+}
+
+class HeroesRouter: RouteModuleProtocol {
+    
+    static func route() -> UIViewController {
+        let viewController = HeroesViewController()
+        let interactor = HeroesInteractor()
+        let presenter = HeroesPresenter()
+        
+        viewController.presenter = presenter
+        
+        presenter.interactor = interactor
+        presenter.view = viewController
+        
+        interactor.presenter = presenter
+        
+        return viewController
+    }
+    
+}
