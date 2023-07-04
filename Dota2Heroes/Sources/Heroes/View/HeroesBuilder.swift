@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 protocol BuildModuleProtocol {
-    static func build() -> UINavigationController
+    static func build() -> UIViewController
 }
 
 class HeroesBuilder: BuildModuleProtocol {
     
-    static func build() -> UINavigationController {
+    static func build() -> UIViewController {
         let viewController = HeroesViewController()
         let interactor = HeroesInteractor()
         let presenter = HeroesPresenter()
@@ -26,7 +26,7 @@ class HeroesBuilder: BuildModuleProtocol {
         
         interactor.presenter = presenter
         
-        return UINavigationController(rootViewController: viewController)
+        return viewController
     }
     
 }
