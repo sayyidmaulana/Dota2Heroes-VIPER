@@ -24,6 +24,7 @@
 		0BDAEA412A4C17D600C9F610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAEA402A4C17D600C9F610 /* Assets.xcassets */; };
 		0BDAEA442A4C17D600C9F610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BDAEA422A4C17D600C9F610 /* LaunchScreen.storyboard */; };
 		0BDAEA4F2A4C32C700C9F610 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAEA4E2A4C32C700C9F610 /* HeroesViewController.swift */; };
+		0BEC34462A5BC111008C6E89 /* DetailHeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEC34452A5BC111008C6E89 /* DetailHeroesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0BDAEA432A4C17D600C9F610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BDAEA452A4C17D600C9F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BDAEA4E2A4C32C700C9F610 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		0BEC34452A5BC111008C6E89 /* DetailHeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeroesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +145,18 @@
 		0BDAEA4D2A4C32A600C9F610 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				0BEC34442A5BC0E0008C6E89 /* DetailView */,
 				0BDAEA4C2A4C323000C9F610 /* View */,
 			);
 			path = Heroes;
+			sourceTree = "<group>";
+		};
+		0BEC34442A5BC0E0008C6E89 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				0BEC34452A5BC111008C6E89 /* DetailHeroesViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				0BDAEA3C2A4C17D500C9F610 /* ViewController.swift in Sources */,
 				0BDAEA382A4C17D500C9F610 /* AppDelegate.swift in Sources */,
 				0B4534812A4D1D9700A50BCB /* HeroesPresenter.swift in Sources */,
+				0BEC34462A5BC111008C6E89 /* DetailHeroesViewController.swift in Sources */,
 				0B45347D2A4D1D5100A50BCB /* HeroesCell.swift in Sources */,
 				0B4534852A4D1DC100A50BCB /* HeroesRouter.swift in Sources */,
 				0B79A52E2A52B842004693D7 /* Constraints.swift in Sources */,

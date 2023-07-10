@@ -48,7 +48,8 @@ class HeroesInteractor: HeroesInteractorProtocol {
     }
     
     func didSelectHeroes(at indexPath: IndexPath) {
-        
+        let hero = heroesViewModels.cells[indexPath.row]
+        presenter.presentToDetail(hero)
     }
     
 }

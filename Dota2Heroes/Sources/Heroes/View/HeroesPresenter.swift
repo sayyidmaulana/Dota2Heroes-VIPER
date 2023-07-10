@@ -24,6 +24,7 @@ class HeroesPresenter: HeroesPresenterInput {
     
     weak var view: HeroesViewProcotol!
     var interactor: HeroesInteractorProtocol!
+    var router: RouteModuleProtocol!
     
     func fetchHeroes() {
         interactor.getHeroesData()
@@ -54,7 +55,7 @@ extension HeroesPresenter: HeroesPresenterOutput {
     }
     
     func presentToDetail(_ hero: HeroesViewModel.Cell) {
-        
+        router.pushToDetail(hero: hero)
     }
     
 }
